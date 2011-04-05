@@ -1,0 +1,9 @@
+net.andirc.lteonfoff.Main -> net.andirc.lteonfoff.Main:
+    void onCreate(android.os.Bundle) -> onCreate
+    void radioInfo() -> a
+    void access$0(net.andirc.lteonfoff.Main) -> a
+net.andirc.lteonfoff.Main$1 -> net.andirc.lteonfoff.a:
+    net.andirc.lteonfoff.Main this$0 -> a
+    android.content.SharedPreferences val$settings -> b
+    android.widget.CheckBox val$chkSkip -> c
+    void onClick(android.view.View) -> onClick

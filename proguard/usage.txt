@@ -1,0 +1,8 @@
+net.andirc.lteonfoff.Main:
+    public static final java.lang.String PREFS_NAME
+net.andirc.lteonfoff.R
+net.andirc.lteonfoff.R$attr
+net.andirc.lteonfoff.R$drawable
+net.andirc.lteonfoff.R$id
+net.andirc.lteonfoff.R$layout
+net.andirc.lteonfoff.R$string

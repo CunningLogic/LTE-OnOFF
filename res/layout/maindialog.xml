@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="200dip"
+	android:id="@+id/RelativeLayout01">
+ 
+     <ScrollView
+     	android:id="@+id/ScrollView01"
+		android:layout_width="fill_parent"
+		android:layout_below="@+id/ImageView01"
+		android:layout_margin="10dip"
+		android:layout_height="fill_parent">
+ 			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:id="@+id/RelativeLayout02">
+				 <TextView
+				 	android:id="@+id/txtDetails"
+				 	android:layout_width="wrap_content"
+				 	android:layout_height="wrap_content" />
+				 <CheckBox
+				 	 android:id="@+id/chkSkip"
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:layout_centerHorizontal="true"
+					 android:layout_below="@+id/txtDetails"
+				 />
+				 <Button
+					 android:id="@+id/btnOpen"
+					 android:layout_below="@+id/chkSkip"
+					 android:layout_width="125dip"
+					 android:layout_height="wrap_content"
+					 android:text="Open" />
+					 
+			 	 <Button
+					 android:id="@+id/btnLicense"
+					 android:layout_alignParentRight="true"
+					 android:layout_below="@+id/chkSkip"
+					 android:layout_width="125dip"
+					 android:layout_height="wrap_content"
+					 android:text="License" />
+			 </RelativeLayout>
+	 </ScrollView>
+	 
+
+</RelativeLayout>
