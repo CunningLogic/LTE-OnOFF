@@ -8,15 +8,17 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 128):
+Constant Pool (count = 137):
   - Integer [2130837504]
   - Integer [2130903040]
   - Integer [2130903041]
-  - Integer [2131034112]
-  - Integer [2131034113]
-  - Integer [2131034114]
-  - String [LTE OnOff]
+  - Integer [2131034116]
+  - Integer [2131034117]
+  - Integer [2131034118]
+  - Integer [2131034119]
+  - String [LTE Settings]
   - String [On the next screen, scroll down to "Set preferred network type" and choose "CDMA + LTE/EvDo auto" to enable 4GLTE + 3G , or "CDMA auto (PRL)" for 3G only.]
+  - String [Skip This Dialog]
   - String [android.intent.action.MAIN]
   - String [com.android.settings]
   - String [com.android.settings.RadioInfo]
@@ -35,6 +37,7 @@ Constant Pool (count = 128):
   - Class [java/lang/System]
   - Class [net/andirc/lteonfoff/Main]
   - Class [net/andirc/lteonfoff/a]
+  - Class [net/andirc/lteonfoff/b]
   - Methodref [android/app/Activity.<init> ()V]
   - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
   - Methodref [android/app/Dialog.<init> (Landroid/content/Context;)V]
@@ -49,6 +52,7 @@ Constant Pool (count = 128):
   - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
   - Methodref [android/content/Intent.setComponent (Landroid/content/ComponentName;)Landroid/content/Intent;]
   - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  - Methodref [android/widget/CheckBox.setText (Ljava/lang/CharSequence;)V]
   - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
   - Methodref [java/lang/System.exit (I)V]
   - Methodref [net/andirc/lteonfoff/Main.a ()V]
@@ -57,12 +61,14 @@ Constant Pool (count = 128):
   - Methodref [net/andirc/lteonfoff/Main.setContentView (I)V]
   - Methodref [net/andirc/lteonfoff/Main.startActivity (Landroid/content/Intent;)V]
   - Methodref [net/andirc/lteonfoff/a.<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/CheckBox;)V]
+  - Methodref [net/andirc/lteonfoff/b.<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V]
   - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
   + NameAndType [<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/CheckBox;)V]
+  + NameAndType [<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V]
   + NameAndType [a ()V]
   + NameAndType [exit (I)V]
   + NameAndType [findViewById (I)Landroid/view/View;]
@@ -96,11 +102,13 @@ Constant Pool (count = 128):
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
   + Utf8 [(Lnet/andirc/lteonfoff/Main;)V]
   + Utf8 [(Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/CheckBox;)V]
+  + Utf8 [(Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V]
   + Utf8 [(Z)V]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [LTE OnOff]
+  + Utf8 [LTE Settings]
   + Utf8 [On the next screen, scroll down to "Set preferred network type" and choose "CDMA + LTE/EvDo auto" to enable 4GLTE + 3G , or "CDMA auto (PRL)" for 3G only.]
+  + Utf8 [Skip This Dialog]
   + Utf8 [StackMapTable]
   + Utf8 [a]
   + Utf8 [android.intent.action.MAIN]
@@ -123,6 +131,7 @@ Constant Pool (count = 128):
   + Utf8 [java/lang/System]
   + Utf8 [net/andirc/lteonfoff/Main]
   + Utf8 [net/andirc/lteonfoff/a]
+  + Utf8 [net/andirc/lteonfoff/b]
   + Utf8 [onCreate]
   + Utf8 [prefrences]
   + Utf8 [requestWindowFeature]
@@ -146,7 +155,7 @@ Methods (count = 4):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #27
+      [1] invokespecial #30
         - Methodref [android/app/Activity.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -155,151 +164,175 @@ Methods (count = 4):
     Access flags: 0x1
       = public void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 133, locals = 4, stack = 6):
+    + Code attribute instructions (code length = 165, locals = 5, stack = 6):
       [0] aload_0 v0
       [1] iconst_1
-      [2] invokevirtual #45
+      [2] invokevirtual #49
         - Methodref [net/andirc/lteonfoff/Main.requestWindowFeature (I)Z]
       [5] pop
       [6] aload_0 v0
       [7] aload_1 v1
-      [8] invokespecial #28
+      [8] invokespecial #31
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [11] aload_0 v0
       [12] ldc #2
         - Integer [2130903040]
-      [14] invokevirtual #46
+      [14] invokevirtual #50
         - Methodref [net/andirc/lteonfoff/Main.setContentView (I)V]
       [17] aload_0 v0
-      [18] ldc #12
+      [18] ldc #14
         - String [prefrences]
       [20] iconst_0
-      [21] invokevirtual #44
+      [21] invokevirtual #48
         - Methodref [net/andirc/lteonfoff/Main.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
       [24] dup
       [25] astore_1 v1
-      [26] ldc #13
+      [26] ldc #15
         - String [skipdialog]
       [28] iconst_0
-      [29] invokeinterface #49
+      [29] invokeinterface #54
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [34] iconst_1
       [35] ificmpne +8 (target=43)
       [38] aload_0 v0
-      [39] invokespecial #43
+      [39] invokespecial #47
         - Methodref [net/andirc/lteonfoff/Main.a ()V]
       [42] return
-      [43] new #15
+      [43] new #17
         - Class [android/app/Dialog]
       [46] dup
       [47] aload_0 v0
-      [48] invokespecial #29
+      [48] invokespecial #32
         - Methodref [android/app/Dialog.<init> (Landroid/content/Context;)V]
       [51] dup
       [52] astore_2 v2
       [53] iconst_3
-      [54] invokevirtual #31
+      [54] invokevirtual #34
         - Methodref [android/app/Dialog.requestWindowFeature (I)Z]
       [57] pop
       [58] aload_2 v2
       [59] ldc #3
         - Integer [2130903041]
-      [61] invokevirtual #33
+      [61] invokevirtual #36
         - Methodref [android/app/Dialog.setContentView (I)V]
       [64] aload_2 v2
-      [65] ldc #7
-        - String [LTE OnOff]
-      [67] invokevirtual #35
+      [65] ldc #8
+        - String [LTE Settings]
+      [67] invokevirtual #38
         - Methodref [android/app/Dialog.setTitle (Ljava/lang/CharSequence;)V]
       [70] aload_2 v2
-      [71] iconst_1
-      [72] invokevirtual #32
+      [71] iconst_0
+      [72] invokevirtual #35
         - Methodref [android/app/Dialog.setCancelable (Z)V]
       [75] aload_2 v2
       [76] ldc #4
-        - Integer [2131034112]
-      [78] invokevirtual #30
+        - Integer [2131034116]
+      [78] invokevirtual #33
         - Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [81] checkcast #23
+      [81] checkcast #25
         - Class [android/widget/TextView]
-      [84] ldc #8
+      [84] dup
+      [85] astore_3 v3
+      [86] ldc #9
         - String [On the next screen, scroll down to "Set preferred network type" and choose "CDMA + LTE/EvDo auto" to enable 4GLTE + 3G , or "CDMA auto (PRL)" for 3G only.]
-      [86] invokevirtual #41
+      [88] invokevirtual #45
         - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [89] aload_2 v2
-      [90] ldc #5
-        - Integer [2131034113]
-      [92] invokevirtual #30
+      [91] aload_2 v2
+      [92] ldc #5
+        - Integer [2131034117]
+      [94] invokevirtual #33
         - Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [95] checkcast #22
+      [97] checkcast #24
         - Class [android/widget/CheckBox]
-      [98] astore_3 v3
-      [99] aload_2 v2
-      [100] ldc #6
-        - Integer [2131034114]
-      [102] invokevirtual #30
+      [100] dup
+      [101] astore v4
+      [103] ldc #10
+        - String [Skip This Dialog]
+      [105] invokevirtual #44
+        - Methodref [android/widget/CheckBox.setText (Ljava/lang/CharSequence;)V]
+      [108] aload_2 v2
+      [109] ldc #6
+        - Integer [2131034118]
+      [111] invokevirtual #33
         - Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
-      [105] checkcast #21
+      [114] checkcast #23
         - Class [android/widget/Button]
-      [108] new #26
+      [117] new #28
         - Class [net/andirc/lteonfoff/a]
-      [111] dup
-      [112] aload_0 v0
-      [113] aload_1 v1
-      [114] aload_3 v3
-      [115] invokespecial #48
+      [120] dup
+      [121] aload_0 v0
+      [122] aload_1 v1
+      [123] aload v4
+      [125] invokespecial #52
         - Methodref [net/andirc/lteonfoff/a.<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/CheckBox;)V]
-      [118] invokevirtual #40
+      [128] invokevirtual #43
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [121] aload_2 v2
-      [122] invokevirtual #36
+      [131] aload_2 v2
+      [132] ldc #7
+        - Integer [2131034119]
+      [134] invokevirtual #33
+        - Methodref [android/app/Dialog.findViewById (I)Landroid/view/View;]
+      [137] checkcast #23
+        - Class [android/widget/Button]
+      [140] new #29
+        - Class [net/andirc/lteonfoff/b]
+      [143] dup
+      [144] aload_0 v0
+      [145] aload_1 v1
+      [146] aload_3 v3
+      [147] invokespecial #53
+        - Methodref [net/andirc/lteonfoff/b.<init> (Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V]
+      [150] invokevirtual #43
+        - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [153] aload_2 v2
+      [154] invokevirtual #39
         - Methodref [android/app/Dialog.show ()V]
-      [125] aload_2 v2
-      [126] iconst_3
-      [127] ldc #1
+      [157] aload_2 v2
+      [158] iconst_3
+      [159] ldc #1
         - Integer [2130837504]
-      [129] invokevirtual #34
+      [161] invokevirtual #37
         - Methodref [android/app/Dialog.setFeatureDrawableResource (II)V]
-      [132] return
+      [164] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 2):
         - [43] Var: ...[a:android/content/SharedPreferences], Stack: (empty)
-        - [132] Var: ..., Stack: (empty)
+        - [164] Var: ..., Stack: (empty)
   + Method:       a()V
     Access flags: 0x2
       = private void a()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 38, locals = 3, stack = 4):
-      [0] new #16
+      [0] new #18
         - Class [android/content/ComponentName]
       [3] dup
-      [4] ldc #10
+      [4] ldc #12
         - String [com.android.settings]
-      [6] ldc #11
+      [6] ldc #13
         - String [com.android.settings.RadioInfo]
-      [8] invokespecial #37
+      [8] invokespecial #40
         - Methodref [android/content/ComponentName.<init> (Ljava/lang/String;Ljava/lang/String;)V]
       [11] astore_1 v1
-      [12] new #17
+      [12] new #19
         - Class [android/content/Intent]
       [15] dup
-      [16] ldc #9
+      [16] ldc #11
         - String [android.intent.action.MAIN]
-      [18] invokespecial #38
+      [18] invokespecial #41
         - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
       [21] dup
       [22] astore_2 v2
       [23] aload_1 v1
-      [24] invokevirtual #39
+      [24] invokevirtual #42
         - Methodref [android/content/Intent.setComponent (Landroid/content/ComponentName;)Landroid/content/Intent;]
       [27] pop
       [28] aload_0 v0
       [29] aload_2 v2
-      [30] invokevirtual #47
+      [30] invokevirtual #51
         - Methodref [net/andirc/lteonfoff/Main.startActivity (Landroid/content/Intent;)V]
       [33] iconst_0
-      [34] invokestatic #42
+      [34] invokestatic #46
         - Methodref [java/lang/System.exit (I)V]
       [37] return
       Code attribute exceptions (count = 0):
@@ -310,7 +343,7 @@ Methods (count = 4):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #43
+      [1] invokespecial #47
         - Methodref [net/andirc/lteonfoff/Main.a ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -461,6 +494,123 @@ Methods (count = 2):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
         - [37] Var: ...[a:android/content/SharedPreferences$Editor], Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: net/andirc/lteonfoff/b
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class net.andirc.lteonfoff.b extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/view/View$OnClickListener]
+
+Constant Pool (count = 46):
+  - Integer [2130968577]
+  - Class [android/content/SharedPreferences]
+  - Class [android/content/SharedPreferences$Editor]
+  - Class [android/view/View]
+  - Class [android/view/View$OnClickListener]
+  - Class [android/widget/TextView]
+  - Class [java/lang/Object]
+  - Class [net/andirc/lteonfoff/Main]
+  - Class [net/andirc/lteonfoff/b]
+  - Fieldref [net/andirc/lteonfoff/b.a Lnet/andirc/lteonfoff/Main;]
+  - Fieldref [net/andirc/lteonfoff/b.b Landroid/content/SharedPreferences;]
+  - Fieldref [net/andirc/lteonfoff/b.c Landroid/widget/TextView;]
+  - Methodref [android/widget/TextView.setText (I)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Lnet/andirc/lteonfoff/Main;]
+  + NameAndType [b Landroid/content/SharedPreferences;]
+  + NameAndType [c Landroid/widget/TextView;]
+  + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [setText (I)V]
+  + Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Landroid/content/SharedPreferences;]
+  + Utf8 [Landroid/widget/TextView;]
+  + Utf8 [Lnet/andirc/lteonfoff/Main;]
+  + Utf8 [a]
+  + Utf8 [android/content/SharedPreferences]
+  + Utf8 [android/content/SharedPreferences$Editor]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [android/widget/TextView]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [edit]
+  + Utf8 [java/lang/Object]
+  + Utf8 [net/andirc/lteonfoff/Main]
+  + Utf8 [net/andirc/lteonfoff/b]
+  + Utf8 [onClick]
+  + Utf8 [setText]
+
+Fields (count = 3):
+  + Field:        a Lnet/andirc/lteonfoff/Main;
+    Access flags: 0x1002
+      = private net.andirc.lteonfoff.Main a
+  + Field:        b Landroid/content/SharedPreferences;
+    Access flags: 0x1012
+      = private final android.content.SharedPreferences b
+  + Field:        c Landroid/widget/TextView;
+    Access flags: 0x1012
+      = private final android.widget.TextView c
+
+Methods (count = 2):
+  - Method:       <init>(Lnet/andirc/lteonfoff/Main;Landroid/content/SharedPreferences;Landroid/widget/TextView;)V
+    Access flags: 0x0
+      = b(net.andirc.lteonfoff.Main,android.content.SharedPreferences,android.widget.TextView)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #10
+        - Fieldref [net/andirc/lteonfoff/b.a Lnet/andirc/lteonfoff/Main;]
+      [5] aload_0 v0
+      [6] aload_2 v2
+      [7] putfield #11
+        - Fieldref [net/andirc/lteonfoff/b.b Landroid/content/SharedPreferences;]
+      [10] aload_0 v0
+      [11] aload_3 v3
+      [12] putfield #12
+        - Fieldref [net/andirc/lteonfoff/b.c Landroid/widget/TextView;]
+      [15] aload_0 v0
+      [16] invokespecial #14
+        - Methodref [java/lang/Object.<init> ()V]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/view/View;)V
+    Access flags: 0x11
+      = public final void onClick(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #11
+        - Fieldref [net/andirc/lteonfoff/b.b Landroid/content/SharedPreferences;]
+      [4] invokeinterface #15
+        - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [9] pop
+      [10] aload_0 v0
+      [11] getfield #12
+        - Fieldref [net/andirc/lteonfoff/b.c Landroid/widget/TextView;]
+      [14] ldc #1
+        - Integer [2130968577]
+      [16] invokevirtual #13
+        - Methodref [android/widget/TextView.setText (I)V]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
 
 Class file attributes (count = 0):
 

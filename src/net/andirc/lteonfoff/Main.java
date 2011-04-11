@@ -8,11 +8,11 @@ package net.andirc.lteonfoff;
  *  a basic need, to toggle PreferredNetworks. The whole app can
  *  be summed up as:
  *  
- *  	   ComponentName intentComponent = new ComponentName("com.android.settings", "com.android.settings.RadioInfo");
+ *  	  ComponentName intentComponent = new ComponentName("com.android.settings", "com.android.settings.RadioInfo");
  * 	      Intent mainIntent = new Intent("android.intent.action.MAIN");
  *   	  mainIntent.setComponent(intentComponent);
  *   	  startActivity(mainIntent);
- *   	  System.exit(0);
+ *    	  System.exit(0);
  * 
  */
 
@@ -48,8 +48,7 @@ public class Main extends Activity {
         dialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
         dialog.setContentView(R.layout.maindialog);
         dialog.setTitle("LTE Settings");
-        
-        dialog.setCancelable(true);
+        dialog.setCancelable(false);
         //there are a lot of settings, for dialog, check them all out!
 
         //set up text

@@ -7,3 +7,8 @@ net.andirc.lteonfoff.Main$1 -> net.andirc.lteonfoff.a:
     android.content.SharedPreferences val$settings -> b
     android.widget.CheckBox val$chkSkip -> c
     void onClick(android.view.View) -> onClick
+net.andirc.lteonfoff.Main$2 -> net.andirc.lteonfoff.b:
+    net.andirc.lteonfoff.Main this$0 -> a
+    android.content.SharedPreferences val$settings -> b
+    android.widget.TextView val$txtDetails -> c
+    void onClick(android.view.View) -> onClick
